@@ -13,10 +13,10 @@ import java.util.List;
 @RequestMapping("/test")
 public class TestController {
 
-    private final StudentService studentService;
+    private final StudentService stuService;
 
     public TestController(StudentService studentService) {
-        this.studentService = studentService;
+        this.stuService = studentService;
     }
 
     @GetMapping
@@ -26,6 +26,6 @@ public class TestController {
 
     @GetMapping("/getAll")
     public List<Student> getAll(){
-        return studentService.getAllStudents();
+        return stuService.getAllStudents();
     }
 }
